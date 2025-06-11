@@ -54,7 +54,7 @@ Descripción de la solución del problema:
 
 6.4 - Se crea la variable montoAConvertir de tipo double, para almacenar el monto de dinero a convertir.
 
-6.5 - Se crea un ciclo while con la condición
+6.5 - Se crea un ciclo while con la condición de que la variable 
   
   
     
