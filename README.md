@@ -46,7 +46,7 @@ Descripción de la solución del problema:
 
 6.- Se crea la clase Principal.java la cual es la encargada de interactuar con el usuario.
 
-6.1 - Se crea una variable de control salidaDeLaApp de tipo boolean que cambiará a verdadero cuando el usuario ingrese la opción salir.
+6.1 - Se crea una variable de control salidaDeLaApp de tipo boolean en falso, que cambiará a verdadero cuando el usuario ingrese la opción salir.
 
 6.2 - Se crea un objeto scanner del tipo Scanner, para capturar la opción ingresada del usuario por teclado.
 
@@ -54,7 +54,26 @@ Descripción de la solución del problema:
 
 6.4 - Se crea la variable montoAConvertir de tipo double, para almacenar el monto de dinero a convertir.
 
-6.5 - Se crea un ciclo while con la condición de que la variable 
+6.5 - Se crea un ciclo while que se ejecuta mientras la variable salidaDeLaApp sea falsa.
+
+6.5.1 - Se crea una sentencia switch que recibe como parámetro la opción ingresada por el usuario y dirige a las siguientes opciones:
+
+* 1 Convertir de Dólar USD a peso chileno CLP
+* 2 Convertir de peso chileno CLP a dólar USD
+* 3 Convertir de dólar USD a real brasileño BRL
+* 4 Convertir de real brasileño BRL a dólar USD
+* 5 Convertir de dólar USD a peso argentino ARS
+* 6 Convertir de peso argentino ARS a dólar USD
+* 7 Salir de sistema
+
+6.5.2 Las opciones de la 1 a la 6 contienen un mensaje al usuario que ingrese el monto a convertir, luego se captura como un double y según las monedas de origen y destino, el objeto consumirApi, llama al método de la clase convertirMonedas() para realizar la conversión y mostrar los resultados al usuario. El proceso se repite hasta que el usuario ingresa la opción 7.
+
+Dificultades encontradas
+************************
+
+La principal dificultad radicó en encontrar en la biblioteca de tuturiales de la API la url que representara de manera más precisa, las operaciones de conversión de monedas que se deseaba realizar.
+
+Por otra parte, se destinó mucho tiempo a entender la lógica de funcionamiento de los elementos HttpClient y HttpRequest e integrarlos de manera adecuada con la librería Gson. 
   
   
     
