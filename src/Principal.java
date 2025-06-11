@@ -7,12 +7,12 @@ public class Principal {
     public static void main(String[] args) {
 
         boolean salidaDeLaApp;
-        salidaDeLaApp = true;
+        salidaDeLaApp = false;
         Scanner scanner = new Scanner(System.in);
         ConsumirApi consumirApi = new ConsumirApi();
         double montoAConvertir;
 
-        while(salidaDeLaApp) {
+        while(!salidaDeLaApp) {
             System.out.println("**************************************************");
             System.out.println("************* CONVERSOR DE MONEDAS ***************");
             System.out.println("**************************************************");
@@ -91,7 +91,7 @@ public class Principal {
                     break;
 
                 case 7:
-                    salidaDeLaApp = false;
+                    salidaDeLaApp = true;
                     System.out.println("Ha seleccionado salir de la app...adios!");
                     scanner.close();
                     break;
