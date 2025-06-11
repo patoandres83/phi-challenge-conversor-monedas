@@ -20,9 +20,13 @@ Descripción de la solución del problema:
     * Peso Argentino (ARS) a Dólar (USD)
 
 2.- Se crea una API key para poder realizar las consultas a la base de datos de Api Exchange Rate.
+
 3.- Para conectar la app con la api, se crear el package "com.conversormonedas.consumirapi".
+
 4.- Se incluye la librería de Gson, para interpretar las respuestas de la API.
+
 5.- Se crea el archivo ConsumirApi.java que se encarga de la comunicación entre la app y la Api Exchange Rate.
+
   5.1 - Se crea el método sin retorno convertirMonedas() que recibe como parámetro el código de moneda de origen (String), el código de moneda de destino (String)          y el monto a convertir(Double). Se crea la url para la conexión con los parámetros entregados.
   5.2 - Se crea el objeto client de tipo HttpClient y el objeto request de tipo HttpRequest, para realizar la petición de conexión a la API.
   5.3 - Mediante un  try catch, se realiza la construcción de la petición de datos para que retorne un String y poder procesar la respuesta. En caso de que falle           el intento de comunicación se arroja la excepción en dos de casos IOException  o InterruptedException
@@ -33,6 +37,7 @@ Descripción de la solución del problema:
         * conversion_rate: es la razón de conversión entre las monedas.
         * conversion_result: el valor total de la moneda de origen convertido a la moneda de destino.
   5.6 - Se imprime el resultado de la conversión.
+
 6.- Se crea la clase Principal.java la cual es la encargada de interactuar con el usuario.
   6.1 - Se crea una variable de control salidaDeLaApp de tipo boolean que cambiará a verdadero cuando el usuario ingrese la opción salir.
   6.2 - Se crea un objeto scanner del tipo Scanner, para capturar la opción ingresada del usuario por teclado.
